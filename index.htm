@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Marketing Digital para Crecer en TikTok | Nova Vision</title>
+    <meta name="description" content="Aumenta tu visibilidad en TikTok e Instagram con estrategias claras, edición profesional y acompañamiento personalizado. ¡Crecimiento real sin complicaciones!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(90deg, #FFD700 0%, #FFEC8B 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .gold-border {
+            border: 1px solid #FFD700;
+        }
+        
+        .gold-bg {
+            background-color: #FFD700;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #000000 0%, #1a1a2e 100%);
+        }
+        
+        .section-bg {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+        }
+        
+        .testimonial-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
+        }
+        
+        .contact-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transition: opacity 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+        }
+        
+        .btn-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .btn-transition {
+            transition: all 0.3s ease;
+        }
+        
+        .particle {
+            position: absolute;
+            background-color: rgba(255, 215, 0, 0.5);
+            border-radius: 50%;
+        }
+        
+        .pack-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px rgba(255, 215, 0, 0.2);
+        }
+        
+        .pack-card {
+            transition: all 0.3s ease;
+        }
+         .pulse-once {
+            animation: pulse-entrada 2s ease-in-out 4 ;
+            transform: scale(1); /* Evita conflictos con scale de Tailwind */
+        }
+        .logo-nova{
+            margin-right: 1rem;
+        }
+        @keyframes pulse-entrada {
+        0%, 100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(1.08);
+            opacity: 0.9;
+        }
+        
+}
+
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="../Imagenes/Logo solo.png" alt="Logo Nova Vision" class="logo-nova w-10 h-10 rounded-full" />
+                    <span class="text-white font-bold text-xl">NOVA <span class="gold-gradient">VISION</span></span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-white hover:text-yellow-400 transition">Nosotros</a>
+                    <a href="#method" class="text-white hover:text-yellow-400 transition">Método</a>
+                    <a href="#services" class="text-white hover:text-yellow-400 transition">Servicios</a>
+                    <a href="#pricing" class="text-white hover:text-yellow-400 transition">Packs</a>
+                    <a href="#contact" class="text-white hover:text-yellow-400 transition">Contacto</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black py-4 px-6 absolute w-full left-0 top-full">
+            <div class="flex flex-col space-y-4">
+                <a href="#about" class="text-white hover:text-yellow-400 transition">Nosotros</a>
+                <a href="#method" class="text-white hover:text-yellow-400 transition">Método</a>
+                <a href="#services" class="text-white hover:text-yellow-400 transition">Servicios</a>
+                <a href="#pricing" class="text-white hover:text-yellow-400 transition">Packs</a>
+                <a href="#contact" class="text-white hover:text-yellow-400 transition">Contacto</a>
+                <a href="#contact" class="gold-gradient font-bold">Agendar llamada</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-32 pb-20 relative overflow-hidden">
+        <div id="particles-js"></div>
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    <span class="gold-gradient">Haz que tus redes</span><br>
+                    trabajen a tu favor
+                </h1>
+                <p class="text-xl text-gray-300 mb-8">
+                    Estrategias claras, contenido profesional y crecimiento real en TikTok e Instagram.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="gold-border text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold py-3 px-8 rounded-full text-center btn-hover btn-transition">
+                         🚀 Agenda tu llamada gratuita
+                    </a>
+                    <a href="#method" class="border border-gray-600 text-white hover:bg-gray-800 font-bold py-3 px-8 rounded-full text-center btn-hover btn-transition">
+                        Conoce nuestro método
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in">
+                <div class="relative">
+                    <div class="w-full h-full bg-yellow-400 bg-opacity-10 rounded-2xl absolute -bottom-3 -right-3"></div>
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Creador de contenido editando vídeos para TikTok e Instagram" class="rounded-2xl relative z-10 w-full h-auto animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-bg fade-in">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-gradient">¿Quiénes somos?</span>
+                </h2>
+                <div class="w-20 h-1 gold-bg mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Nova Vision es una agencia nueva pero con un enfoque claro: ayudar a pequeños negocios, influencers y marcas personales a crecer en redes sociales sin complicaciones.
+                </p>
+            </div>
+            <div class="bg-black bg-opacity-50 border border-gray-800 rounded-2xl p-8 max-w-4xl mx-auto text-center relative overflow-hidden">
+                <div class="absolute -top-10 -left-10 w-20 h-20 rounded-full gold-bg opacity-10"></div>
+                <div class="absolute -bottom-10 -right-10 w-20 h-20 rounded-full gold-bg opacity-10"></div>
+                <p class="text-2xl md:text-3xl font-bold mb-6 gold-gradient">
+                    "Tú pones la pasión. Nosotros, la visibilidad."
+                </p>
+                <div class="flex justify-center">
+                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center">
+                        <i class="fas fa-star text-black text-xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section id="method" class="py-20 bg-black fade-in">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-gradient">MÉTODO NOVA</span>
+                </h2>
+                <div class="w-20 h-1 gold-bg mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Un proceso claro y efectivo para llevar tu presencia en redes sociales al siguiente nivel.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Step 1 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-16 h-16 rounded-full gold-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Análisis</h3>
+                    <p class="text-gray-300">
+                        Revisión completa de tu perfil + llamada gratuita para entender tus objetivos y audiencia.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-16 h-16 rounded-full gold-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-compass text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Dirección</h3>
+                    <p class="text-gray-300">
+                        Estrategia personalizada + plan de contenido claro con calendario y temas específicos.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-16 h-16 rounded-full gold-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-rocket text-black text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Difusión</h3>
+                    <p class="text-gray-300">
+                        Contenido listo para publicar + recomendaciones de hashtags y horarios para maximizar alcance.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#contact" class="gold-border text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold py-3 px-8 rounded-full inline-block btn-hover btn-transition">
+                    Descubre cómo funciona
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 section-bg fade-in">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-gradient">Nuestros Servicios</span>
+                </h2>
+                <div class="w-20 h-1 gold-bg mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Soluciones específicas para cada necesidad en tu estrategia de redes sociales.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Service 1 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center mb-4">
+                        <i class="fas fa-search text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Auditoría de perfil</h3>
+                    <p class="text-gray-300">
+                        Análisis completo de tu cuenta con recomendaciones para mejorar engagement y crecimiento.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center mb-4">
+                        <i class="fas fa-chess text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Estrategia de contenido</h3>
+                    <p class="text-gray-300">
+                        Plan personalizado con temas, formatos y calendario para 1 mes de publicaciones.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center mb-4">
+                        <i class="fas fa-film text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Edición de vídeos</h3>
+                    <p class="text-gray-300">
+                        Creación profesional de Reels/TikToks con efectos, transiciones y música trending.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center mb-4">
+                        <i class="fas fa-palette text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Identidad visual</h3>
+                    <p class="text-gray-300">
+                        Diseño de plantillas, colores y estilo consistente para tu marca en redes.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center mb-4">
+                        <i class="fas fa-calendar-alt text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Calendario de publicaciones</h3>
+                    <p class="text-gray-300">
+                        Programación y publicación de contenido en los horarios óptimos para tu audiencia.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800 hover:border-yellow-400 transition">
+                    <div class="w-12 h-12 rounded-full gold-bg flex items-center justify-center mb-4">
+                        <i class="fas fa-comments text-black"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Acompañamiento</h3>
+                    <p class="text-gray-300">
+                        Soporte por WhatsApp para resolver dudas y ajustar estrategia en tiempo real.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <h3 class="text-2xl font-bold gold-gradient mb-6">¿Solo necesitas algo específico?</h3>
+                <div class="bg-gray-900 rounded-2xl p-6 inline-block text-left">
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="mr-2">🎯</span> Auditoría de perfil: <span class="gold-gradient font-bold ml-2">20€</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">🎬</span> Estrategia personalizada (PDF):<span class="gold-gradient font-bold ml-2">35€</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">📆</span> Edición de vídeo (por unidad): <span class="gold-gradient font-bold ml-2">15€</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">🖼️</span> Calendario de publicaciones: <span class="gold-gradient font-bold ml-2">25€</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="mr-2">🖼️</span> Branding básico (colores + bio + estilo):<span class="gold-gradient font-bold ml-2">35€</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-black fade-in">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="gold-gradient">Packs Disponibles</span>
+                </h2>
+                <div class="w-20 h-1 gold-bg mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Soluciones completas para cada etapa de tu crecimiento en redes sociales.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Pack 1 -->
+                <div class="pack-card bg-gray-900 rounded-2xl p-8 border border-gray-800 relative">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Pack Inicial</h3>
+                        <p class="text-gray-400">Perfecto para comenzar</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold gold-gradient">$45€</span>
+                        <span class="text-gray-400">/mes</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Auditoría de perfil completa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Estrategia de contenido básica</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>3 Reels editados</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Calendario de publicaciones</span>
+                        </li>
+                    </ul>
+                    <a href="#contact"
+                        class="gold-bg text-black hover:bg-yellow-500 font-bold py-3 px-8 rounded-full w-full text-center block btn-hover btn-transition">
+                        Elegir este pack
+                    </a>
+                </div>
+                
+                <!-- Pack 2 (Popular) -->
+                
+<div class="pack-card bg-gray-900 rounded-2xl p-8 border-2 border-yellow-400 relative transform scale-105 z-10">
+    <div class="absolute top-0 right-0 bg-yellow-400 text-black font-bold px-4 py-1 rounded-bl-lg rounded-tr-lg">
+        Más popular
+    </div>
+    <div class="mb-6">
+        <h3 class="text-2xl font-bold text-white mb-2">Pack Visibilidad</h3>
+        <p class="text-gray-400">Crecimiento acelerado</p>
+    </div>
+    <div class="mb-6">
+        <span class="text-4xl font-bold gold-gradient">89€</span>
+        <span class="text-gray-400">/mes</span>
+    </div>
+    <ul class="space-y-3 mb-8">
+        <li class="flex items-start">
+            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+            <span>Auditoría de perfil avanzada</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+            <span>Estrategia de contenido premium</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+            <span>8 Reels editados profesionalmente</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+            <span>Identidad visual básica</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+            <span>Publicación y programación</span>
+        </li>
+        <li class="flex items-start">
+            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+            <span>Soporte por WhatsApp</span>
+        </li>
+    </ul>
+    <!-- Aquí agregamos animate-pulse -->
+   <a class="cta-popular pulse-once gold-bg text-black hover:bg-yellow-500 font-bold py-3 px-8 rounded-full w-full text-center block btn-hover btn-transition" href="#contact">
+    Elegir este pack
+</a>
+
+</div>
+
+                
+                <!-- Pack 3 -->
+                <div class="pack-card bg-gray-900 rounded-2xl p-8 border border-gray-800 relative">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Pack Impulso Pro</h3>
+                        <p class="text-gray-400">Máximo rendimiento</p>
+                    </div>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold gold-gradient">160€</span>
+                        <span class="text-gray-400">/mes</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Auditoría de perfil VIP</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Estrategia de contenido avanzada</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>15 Reels editados premium</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Identidad visual completa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Publicación y programación</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Soporte prioritario 24/7</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-yellow-400 mr-2 mt-1"></i>
+                            <span>Análisis semanal de métricas</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="gold-border text-yellow-400 hover:bg-yellow-400 hover:text-black font-bold py-3 px-8 rounded-full w-full text-center block btn-hover btn-transition">
+                        Elegir este pack
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 contact-bg fade-in">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 gold-gradient">
+                    ¿Listo para crecer en redes?
+                </h2>
+                <p class="text-xl text-gray-300 mb-12">
+                    Agenda una llamada gratuita de 20 minutos para analizar tu perfil y descubrir cómo podemos ayudarte a alcanzar tus objetivos.
+                </p>
+                
+<form id="contact-form" action="https://formspree.io/f/xldlwyrp" method="POST" class="space-y-6">
+    <div class="grid md:grid-cols-2 gap-6">
+        <div>
+            <label for="name" class="block text-left text-white mb-2">Nombre</label>
+            <input type="text" id="name" name="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+        </div>
+        <div>
+            <label for="email" class="block text-left text-white mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+        </div>
+    </div>
+    <div>
+        <label for="service" class="block text-left text-white mb-2">¿Qué servicio te interesa?</label>
+        <select id="service" name="service" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            <option value="">Selecciona una opción</option>
+            <option value="pack_inicial">Pack Inicial</option>
+            <option value="pack_visibilidad">Pack Visibilidad</option>
+            <option value="pack_pro">Pack Impulso Pro</option>
+            <option value="servicio_individual">Servicio individual</option>
+            <option value="no_se">No estoy seguro/a</option>
+        </select>
+    </div>
+    <div>
+        <label for="message" class="block text-left text-white mb-2">Cuéntanos sobre tus objetivos</label>
+        <textarea id="message" name="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-yellow-400"></textarea>
+    </div>
+    <button type="submit" class="gold-bg text-black hover:bg-yellow-500 font-bold py-4 px-8 rounded-full w-full text-center block btn-hover btn-transition">
+        📞 Agenda tu llamada gratuita de 20 min
+    </button>
+</form>
+                    <div class="mt-8 pt-8 border-t border-gray-800">
+                        <p class="text-gray-400 mb-6">O contáctanos directamente:</p>
+                        <div class="flex justify-center space-x-6">
+                            <a href="https://www.instagram.com/novavision.social/" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-yellow-400 hover:text-black transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@novavision.social?_t=ZN-8yeShdlhZGo&_r=1" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-yellow-400 hover:text-black transition">
+                                <i class="fab fa-tiktok text-xl"></i>
+                            </a>
+                            <a href="mailto:contacto.novavision@gmail.com" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-yellow-400 hover:text-black transition">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="mt-12 text-xl text-white">
+                    "Tú tienes la historia. Nosotros te ayudamos a contarla."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <div class="w-10 h-10 rounded-full gold-bg flex items-center justify-center mr-3">
+                        <span class="text-black font-bold text-xl">NV</span>
+                    </div>
+                    <span class="text-white font-bold text-xl">NOVA <span class="gold-gradient">VISION</span></span>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mb-6 md:mb-0">
+                    <a href="#about" class="text-gray-400 hover:text-yellow-400 transition">Nosotros</a>
+                    <a href="#method" class="text-gray-400 hover:text-yellow-400 transition">Método</a>
+                    <a href="#services" class="text-gray-400 hover:text-yellow-400 transition">Servicios</a>
+                    <a href="#pricing" class="text-gray-400 hover:text-yellow-400 transition">Packs</a>
+                    <a href="#contact" class="text-gray-400 hover:text-yellow-400 transition">Contacto</a>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/novavision.social/" class="text-gray-400 hover:text-yellow-400 transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@novavision.social?_t=ZN-8yeShdlhZGo&_r=1" class="text-gray-400 hover:text-yellow-400 transition">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2023 Nova Vision Marketing Digital. Todos los derechos reservados.</p>
+                <p class="mt-2">
+                    <a href="#" class="hover:text-yellow-400 transition">Política de privacidad</a> | 
+                    <a href="#" class="hover:text-yellow-400 transition">Términos de servicio</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+        
+        // Form submission
+       document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch(this.action, {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      alert('¡Gracias por tu interés! Nos pondremos en contacto contigo pronto.');
+      this.reset();
+    } else {
+      alert('Ocurrió un error al enviar el formulario.');
+    }
+  }).catch(error => {
+    alert('Ocurrió un error al enviar el formulario.');
+  });
+});
+
+        
+        // Scroll reveal animation
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+        
+        // Check on load
+        window.addEventListener('load', checkVisibility);
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkVisibility);
+        
+        // Create particles for hero section
+        function createParticles() {
+            const container = document.querySelector('.hero-bg');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random size between 1 and 3px
+                const size = Math.random() * 2 + 1;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random animation
+                const duration = Math.random() * 10 + 10;
+                const delay = Math.random() * 5;
+                particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+                
+                container.appendChild(particle);
+            }
+        }
+        
+        // Initialize particles
+        createParticles();
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=novavisionsocial/nv-prov" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p>
+<script>
+            setTimeout(() => {
+                const cta = document.getElementById('cta-popular');
+                if (cta) cta.classList.remove('pulse-once');
+            }, 5000); // se borra después de 5 segundos
+</script>
+
+</body>
+</html>
